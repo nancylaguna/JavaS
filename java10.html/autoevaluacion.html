@@ -8,9 +8,97 @@
         <img src="botonregresar.png" width="120"
         height="50" alt="Regresar">
     </a>
-    <title>Document</title>
+    <title>Autoevaluación</title>
 </head>
 <body>
-    
+    <h1>
+        Autoevaluación
+    </h1>
+    <ol>
+        <h2>10.1 Complete las siguientes oraciones:</h2>
+        <li>
+            Es posible almacenar listas y tablas de valores en <strong> arreglos </strong>
+        </li>
+        <li>
+            El número que se utiliza para referirse a un elemento específico de un arreglo se conoce como su <strong> índice </strong>
+        </li>
+        <li>
+            El proceso de poner en orden los elementos de un arreglo se conoce como <strong> ordenamiento </strong> el arreglo.
+        </li>
+        <li>
+            Al proceso de determinar si un arreglo contiene cierto valor clave se le conoce como <strong> búsqueda </strong> el arreglo.
+        </li>
+        <li>
+            Un arreglo que utiliza dos índices se conoce como arreglo <strong> bidimensional </strong>
+        </li>
+    </ol>
+    <ol>
+        <h2>10.2 Indique si cada uno de los siguientes enunciados es verdadero o falso. Si es falso, explique por qué.</h2>
+        <li>
+            Un arreglo puede almacenar muchos tipos diferentes de valores. <br><strong> Verdadero </strong>
+        </li>
+        <li>
+            Por lo general el índice de un arreglo debe ser un valor de punto flotante. <br><strong> Falso. El índice de un arreglo debe ser un entero o una expresión entera. </strong>
+        </li>
+        <li>
+            Un elemento individual de un arreglo que pasa a una función y se modifica en ésta debe contener el valor modificado cuando la función invocada complete su ejecución. <br><strong> Falso. Los elementos individuales de un tipo de datos primitivo se pasan por valor. Si se pasa una referencia a un arreglo, entonces las modificaciones a los elementos del arreglo se reflejan en el elemento original del arreglo. Además, el elemento individual de un tipo de objeto que se pasa a una función se pasa por referencia, y los cambios en el objeto se reflejarán en el elemento del arreglo original. </strong>
+        </li>
+    </ol>
+    <ol>
+        <h2>10.3 Escriba instrucciones de JavaScript (con respecto al arreglo fracciones) para realizar cada una de las siguientes tareas:</h2>
+        <li>
+            Declarar un arreglo con 10 elementos e inicializar los elementos del arreglo en 0. <br><strong> var fracciones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; </strong>
+        </li>
+        <li>
+            Hacer referencia al elemento 3 del arreglo. <br><strong> fracciones[3] </strong>
+        </li>
+        <li>
+            Hacer referencia al elemento 4 del arreglo. <br><strong> fracciones[4] </strong> 
+        </li>
+        <li>
+            Asignar el valor 1.667 al elemento 9 del arreglo. <br><strong> fracciones[9] = 1.667; </strong>
+        </li>
+        <li>
+            Asignar el valor 3.333 al elemento de menor numeración del arreglo. <br><strong> fracciones[6] = 3.333; </strong>
+        </li>
+        <li>
+            Sumar todos los elementos del arreglo mediante una instrucción for... in. Definir la variable x como variable de control para el ciclo. 
+            <br><strong> var total = 0; <br>for(var x in fracciones){<br>    total += fracciones[x];<br>} </strong>
+        </li>
+    </ol>
+    <ol>
+        <h2>10.4 Escribir instrucciones de JavaScript (con respecto al arreglo tabla) para realizar cada una de las siguientes tareas:</h2>
+        <li>
+            Declarar y crear el arreglo con tres filas y tres columnas. <br><strong> var tabla = new Array(new Array(3), new Array(3), new Array(3)); </strong>
+        </li>
+        <li>
+            Almacenar el número total de elementos en la variable totalElementos. <br><strong> var totalElementos = tabla.length * tabla[0].length; </strong>
+        </li>
+        <li>
+            Usar una instrucción for... in para inicializar cada elemento del arreglo con la suma de sus índices de dila y de columna. Suponga que las variables x y y se declaran como variables de control. <br><strong> for(var x in tabla){<br>for (var y in table[x]){<br>tabla[x][y] = x + y;<br>}<br>} </strong>
+        </li>
+    </ol>
+    <ol>
+        <h2>10.5 Encuentre el o los errores en cada uno de los siguientes segmentos de programa y corríjalos.</h2>
+        <li>
+            var b = new Array(10);
+            <br>var longitud = b.length;
+            <br>for(var i = 0; i <= longitud; ++i){
+                <br>b[i] = 1;
+                <br>}
+            <strong>  
+                <br>Error: Se hace referencia al elemento de un arreglo fuera de los límites del arreglo (b[10]).
+                <br>Corrección: cambie el operador <= a <.
+            </strong>
+        </li>
+        <li>
+            var a = [[1, 2], [3, 4]];
+            <br>a[1, 1] = 5;
+            <strong>  
+                <br>Error: el indexado de arreglos se realiza de anera incorrecta.
+                <br>Correción: cambie la instrucción a a[1][1] = 5;
+            </strong>
+        </li>
+    </ol>
 </body>
 </html>
