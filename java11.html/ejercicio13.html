@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.14</title>
+</head>
+<body>
+    <h2>Escriba una secuencia de comandos con base en el programa del ejercicio 11.13 que reciba como entrada varias líneas de texto y utilice el método String IndexOf para determinar el número total de cocurrencias de cada letra del alfabeto en ese texto. Las primeras mayúsculas y minúsculas deben contarse como una sola. Almacene los totales para cada letra en un arreglo, e imprima los valores en formato tabular en un elemento textarea  de HTML5 después de que se hayan determinado los totales.</h2>
+    <script>
+            let btnGuardar = document.querySelector('#save');
+            btnGuardar.addEventListener('click', e=>{
+                let frase = document.querySelector('.valor').value;
+                let respuesta= document.querySelector('.respuesta');
+                respuesta.textContent='Frase: ${frase}, frase en mayusculas: ${frase.toUpperCase()}, frase en minusculas ${frase.toLowerCase()}';
+            });
+    </script>
+</body>
+</html>

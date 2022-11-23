@@ -14,98 +14,229 @@
     <ol>
         <h2>10. 6 Complete las siguientes oraciones</h2>
         <li>
-            JavaScript almacena listas de valores en <strong>  </strong>
+            JavaScript almacena listas de valores en <strong> arreglos </strong>
         </li>
         <li>
-            Los nombres de los cuatro elementos del arreglo p son <strong>  </strong>
+            Los nombres de los cuatro elementos del arreglo p son <strong> p[0], p[1], p[2], p[3] </strong>
         </li>
         <li>
-            En un arreglo bidimensional, por convención el primer índice identifica el <strong>  </strong> de un elemento y el segundo índice identifica el <strong>  </strong> de un elemento.
+            En un arreglo bidimensional, por convención el primer índice identifica el <strong> fila </strong> de un elemento y el segundo índice identifica el <strong> columna </strong> de un elemento.
         </li>
         <li>
-            Un arreglo de m por n contiene <strong>  </strong> filas, <strong>  </strong> columnas y <strong>  </strong> elementos.
+            Un arreglo de m por n contiene <strong> m </strong> filas, <strong>  </strong> columnas y <strong> m*n </strong> elementos.
         </li>
         <li>
-            El nombre de un elemento en la fila 3 y la columna 5 del arreglo d es <strong>  </strong>
+            El nombre de un elemento en la fila 3 y la columna 5 del arreglo d es <strong>d[2][4]  </strong>
         </li>
     </ol>
     <ol>
         <h2>10.7 Indique si cada uno de los siguientes enunciados es verdadero o falso. Si es falso, explique por qué.</h2>
         <li>
-            Para hacer referencia a una ubicación o un elemento específico en un arreglo, especificamos el nombre del arreglo y el valor del elemento. <br><strong>  </strong>
+            Para hacer referencia a una ubicación o un elemento específico en un arreglo, especificamos el nombre del arreglo y el valor del elemento. <br><strong> Falso. Se debe de indicar el nombre del arreglo y el índice del elemento. </strong>
         </li>
         <li>
-            La declaración de una variable reserva espacio para un arreglo. <br><strong>  </strong>
+            La declaración de una variable reserva espacio para un arreglo. <br><strong> Verdadero </strong>
         </li>
         <li>
-            Para indicar que debenn reservarse 100 ubicaciones para el erreglo entero p, el programador debe escribir la siguiente declaracion: <br>p[100];<br><strong>  </strong>
+            Para indicar que deben reservarse 100 ubicaciones para el erreglo entero p, el programador debe escribir la siguiente declaracion: <br>p[100];<br><strong> Falso. Se debe escribir: var p = new Array(100);. </strong>
         </li>
         <li>
-            Un programa de JavaScript que inicializa los elementos de un arreglo de 15 elementos en cero debe contener cuando menos una instrucción for. <br><strong>  </strong>  
+            Un programa de JavaScript que inicializa los elementos de un arreglo de 15 elementos en cero debe contener cuando menos una instrucción for. <br><strong> Falso. Para poder asignar los valores no es necesario un ciclo for, pero se
+                recomienda utilizar cuando el arreglo es grande. </strong>  
         </li>
         <li>
-            Un programa de JavaScript que calcula el total de los elementos de un arreglo bidimensional debe contener instrucciones for anidadas. <br><strong>  </strong>
+            Un programa de JavaScript que calcula el total de los elementos de un arreglo bidimensional debe contener instrucciones for anidadas. <br><strong> Verdadero</strong>
         </li>
     </ol>
     <ol>
         <h2>10.8 Escriba instrucciones de JavaScript para realizar cada una de las siguientes tareas:</h2>
         <li>
-            Mostrar el valor del séptimo elemento ddel arreglo f. <br><strong>  </strong>
+            Mostrar el valor del séptimo elemento ddel arreglo f. <br><strong> <p class="codigo">document.writeln(f[6]);</p> </strong>
         </li>
         <li>
-            Inicializar cada uno de los cienco elementos del arreglo unidimensional g en 8. <br><strong>  </strong>
+            Inicializar cada uno de los cienco elementos del arreglo unidimensional g en 8. <br><strong> <p class="codigo">var g = [8,8,8,8,8];</p></strong>
         </li>
         <li>
-            Calcular el total de los elementos del arreglo c, que contiene 100 elementos numéricos. <br><strong>  </strong>
+            Calcular el total de los elementos del arreglo c, que contiene 100 elementos numéricos. <br><strong>  <p class="codigo">var total = 0;<br>
+                for ( var a in c ){<br>
+                total += c[a];<br>
+                }</p></strong>
         </li>
         <li>
-            Copiar el arreglo a de 11 elementos en la primera porción del arreglo b, que contiene 34 elementos.
+            Copiar el arreglo a de 11 elementos en la primera porción del arreglo b, que contiene 34 elementos. <br><strong><p class="codigo">for( var x in a ){ <br>
+                b[x] = a[x]; <br>
+                }</p></strong>
         </li>
         <li>
-            Determinar e imprimir el valor más pequeño y el más grande contenido en el arreglo w de 99 elementos de punto flotante
+            Determinar e imprimir el valor más pequeño y el más grande contenido en el arreglo w de 99 elementos de punto flotante. <br><strong><p class="codigo">document.writeln(Math.min(...w));<br>
+                document.writeln(Math.max(...w));</p></strong>
         </li>
     </ol>
     <ol>
         <h2>10.9 Considere un arreglo de dos por tres que almacena enteros.</h2>
         <li>
-            Escriba una instrucción para declarar y crera el arreglo t.
+            Escriba una instrucción para declarar y crera el arreglo t. <br><strong>var t = new Array( new Array(2), new Array(3) );</strong>
         </li>
         <li>
-            ¿Cuántas filas tiene t?
+            ¿Cuántas filas tiene t? <br><strong>2</strong>
         </li>
         <li>
-            ¿Cuántas columnas tiene t?
+            ¿Cuántas columnas tiene t?<br><strong>3</strong>
         </li>
         <li>
-            ¿Cuántos elementos tiene t?
+            ¿Cuántos elementos tiene t?<br><strong>6</strong>
         </li>
         <li>
-            Escriba los nombres de todos los elementos en la fila 1 de t.
+            Escriba los nombres de todos los elementos en la fila 1 de t.<br><strong>t[0][0], t[0][1], t[0][2].</strong>
         </li>
         <li>
-            Escriba los nombres de todos los elementos en la tercera columna de t.
+            Escriba los nombres de todos los elementos en la tercera columna de t.<br><strong>t[0][2], t[1][2].</strong>
         </li>
         <li>
-            Escriba una sola instrucción para establecer el elemento de t en la fila 1 y la columna 2 en cero.
+            Escriba una sola instrucción para establecer el elemento de t en la fila 1 y la columna 2 en cero.<br><strong>t[0][1] = 0;</strong>
         </li>
         <li>
-            Escriba una serie de instrucciones para inicializar cada elemento de t en cero.
+            Escriba una serie de instrucciones para inicializar cada elemento de t en cero.<br><strong>t[0][0] = 0;<br>
+                t[0][1] = 0;<br>
+                t[0][2] = 0;<br>
+                t[1][0] = 0;<br>
+                t[1][1] = 0;<br>
+                t[1][2] = 0;</p></strong>
         </li>
         <li>
-            Escriba una instrucción for anidada para inicializar cada demento de t en cero.
+            Escriba una instrucción for anidada para inicializar cada demento de t en cero.<br><strong>for(var x in t){
+                for(var y in t[x]){
+                t[x][y] = 0;
+                }
+                }</strong>
         </li>
         <li>
-            Escriba una serie de instrucciones para determinar e imprimir el valor más pequeño en el arreglo t.
+            Escriba una serie de instrucciones para determinar e imprimir el valor más pequeño en el arreglo t.<br><strong>document.writeln(Math.min(...t));</strong>
         </li>
         <li>
-            Escriba una instrucción sin repetición para mostrar los elementos de la primera fila de t.
+            Escriba una instrucción sin repetición para mostrar los elementos de la primera fila de t.<br><strong>document.writeln(t[0][0]); <br>
+                document.writeln(t[0][1]); <br>
+                document.writeln(t[0][2]);</strong>
         </li>
         <li>
-            Escriba una serie de instrucciones para imprimir el arreglo t en un formato tabular ordenado. Liste los índices de columnas como encabezados a lo largo de la parte superior y liste los índices de fila en la parte izquierda de cada fila.
+            Escriba una serie de instrucciones para imprimir el arreglo t en un formato tabular ordenado. Liste los índices de columnas como encabezados a lo largo de la parte superior y liste los índices de fila en la parte izquierda de cada fila.<br><strong><code class="correc">
+                var t = [ <br>
+                    [1,2,3], <br>
+                    [4,5,6] <br>
+                ]; <br>
+                document.writeln("&lt;table>&lt;thead>&lt;th>&lt;/th>&lt;th>0&lt;/th>&lt;th>1&lt;/th>&lt;th>2&lt;/th>&lt;tbody>"); <br>
+                for(var x in t){ <br>
+                    document.writeln("&lt;tr>&lt;td>" + x + "&lt;/td>"); <br>
+                    for(var y in t[x]){ <br>
+                        document.writeln("&lt;td>" + t[x][y] + "&lt;/td>");<br>
+                    } <br>
+                } <br>
+                document.writeln("&lt;/tbody>&lt;/table>");
+            </code></strong>
         </li>
     </ol>
     <ol>
-        <h2>10.10 </h2>
+        <h2>10.10 Use un arreglo unidimensional para resolver el siguiente problema: una empresa paga a su personal de ventas con base en comisiones. </h2>
+        <p> El personal de ventas recibe $200 por semana más el 9 porciento de sus ventas brutas para esa semana. Por ejemplo, un vendedor con ventas brutas de $5000 en una semana recibe $200 más el 9 por ciento de $5000, o un total de $650. Escriba una secuencia de comandos (usando un arreglo de contadores) que obtenga las ventas brutas por cada empleado por medio de un formulario de HTML5 y determine cuántos vendedores obtuvieron salarios en cada uno de los siguientes rango (suponga que el salario de cada vendedor se trunca a un monto entero):</p>
+        <ol>
+            <li>$200 a 299</li>
+            <li>$300 a 399</li>
+            <li>$400 a 499</li>
+            <li>$500 a 599</li>
+            <li>$600 a 699</li>
+            <li>$700 a 799</li>
+            <li>$800 a 899</li>
+            <li>$900 a 999</li>
+            <li>$1000 y más</li>
+        </ol>
+        <div class="boxContent">
+            <form action="#">
+                <label>
+                    Venta bruta:
+                    <input type="number" name="Venta bruta" id="campoVenta">
+                </label>
+                <input type="button" value="Calcular" id="botonCalcular">
+                <p id="resultado"></p>
+            </form>
+            <p id="campoRangos"></p>
+        </div>
     </ol>
+    <ol>
+        <h2>10.11 Escriba instrucciones que realicen operaciones para un arreglo unidimensional:</h2>
+        <li>Establecer los 10 elementos del arreglo cuentas en ceros. <br>
+            <strong>for(var c in cuentas){<br>
+                cuentas[c] = 0;<br>
+                }</strong>
+        </li>
+        <li>Sumar 1 a cada uno de los 15 elementos del arreglo bono. <br>
+            <strong>for(var b in bono){<br>
+                bono[b] ++;<br>
+                }</strong>
+        </li>
+        <li>Mostrar los cinco valores del arreglo mejoresPuntuaciones, separado por espacios. <br>
+            <strong>document.writeln("&lt;p>"); <br>
+                for(var m in mejoresPuntuaciones){<br>
+                document.writeln(mejoresPuntuaciones[m] + " ");<br>
+                } <br>
+                document.writeln("&lt;/p>");</strong>
+        </li>
+    </ol>
+    <ol>
+        <h2>10.12 Use un arreglo unidimensional para resolver el siguiente problema: recibir 10 números de entrada, cada uno de los cuales debe estar entre 10 y 100. A medida que se ingrese cada número, imprímalo sólo si no es un duplicado de un número que ya se haya recibido de entrada.</h2><br>
+        <strong>
+            <div class="boxContent">
+                <form action="#">
+                    <label>
+                        <span id="campoNumero">Número 1:</span>
+                        <input type="number" name="Numero" id="campoValor">
+                        <input type="button" value="Calcular" id="botonCalcular">
+                    </label>
+                </form>
+                <p id="mensajes"></p>
+                <p id="resultado"></p>
+            </div>
+        </strong>   
+    </ol>
+    <ol>
+        <h2>10.13 Etiquete los elementos del arreglo bidimensional de tres por cinco llamado ventas para indicar el orden en el que se deben establecer en cero mediante el siguiente segmento de programa:</h2>
+        <strong>
+            <code>
+                for(var fila in ventas){
+                <pre>   for(var col in ventas[fila]){</pre>
+                <pre>       ventas[fila][col] = 0;</pre>
+                <pre>   }</pre>
+                }
+            </code>
+            <ol>
+                <li>ventas[ 0 ][ 0 ]</li>
+                <li>ventas[ 0 ][ 1 ]</li>
+                <li>ventas[ 0 ][ 2 ]</li>
+                <li>ventas[ 0 ][ 3 ]</li>
+                <li>ventas[ 0 ][ 4 ]</li>
+                <li>ventas[ 1 ][ 0 ]</li>
+                <li>ventas[ 1 ][ 1 ]</li>
+                <li>ventas[ 1 ][ 2 ]</li>
+                <li>ventas[ 1 ][ 3 ]</li>
+                <li>ventas[ 1 ][ 4 ]</li>
+                <li>ventas[ 2 ][ 0 ]</li>
+                <li>ventas[ 2 ][ 1 ]</li>
+                <li>ventas[ 2 ][ 2 ]</li>
+                <li>ventas[ 2 ][ 3 ]</li>
+                <li>ventas[ 2 ][ 4 ]</li>
+            </ol>
+        </strong>
+    </ol>
+    <ol>
+        <h3>10.14 Escriba una secuencia de comandos para simular el tiro de dos dados. La secuencia debe usar Math.random para tirar el primer dado y usar esa función de nuevo para tirar el segundo dado. Después deberá calcularse la suma de los dos valores [nota: como cada dado puede mostrar un valor entero de 1 a 6, la suma de los valores variará de 2 a 12, en donde 7 será la suma más frecuente y tanto 2 como 12 serán las sumas menos frecuentes. La figura siguiente muestra las 36 combinaciones posibles de los dos dados. Su programa deberá tirar los dados 36,000 veces. Use un arreglo bidimensional para calcular el número de veces que aparezca cada posible suma. Muestre los resultados en una tabla de HTML5. Determine además si los totales son razonables (por ejemplo, hay seis formas de tirar un 7 por lo que cerca de 1/6 parte de todos los tiros deberán ser 7)].
+        </h3>
+        <strong>
+            <div class="boxContent">
+                <button id="lanzar">Lanzar</button>
+                <p id="resultado"></p>
+                <p id="totales"></p>
+            </div>
+        </strong>
+    </ol>
+    
 </body>
 </html>

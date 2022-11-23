@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.7</title>
+</head>
+<body>
+    <h2>Escriba una secuencia de comandos que utilice la generación de números aleatorios para crear enunciados. Use cuatro arreglos de cadenas llamados articulo, sustantivo, verbo y preposición</h2>   
+    <p>Para crear un enunciado seleccione una palabra al azar de cada arreglo en el siguiente orden:  articulo,  sustantivo, verbo, preposición,articulo y sustantivo. Al momento de elegir cada palabra hay que concatenarla a las palabras anteriores en el enunciado. Las palabras deben separarse mediante espacios. Cuando se imprima d  enunciado final, deberá empezar con una letra mayúscula y terminar con un punto.Los arreglos deben llenarse de la siguiente manera:</p>
+    <p>El arreglo articulo  debe contener los artículos "el ", "un", "algún" y "ningún"</p> 
+    <p>El arreglo sustantivo debe contener los sustantivos "niño", "niña",  "perro", "ciudad" y "auto"</p> 
+    <p>El arreglo verbos deberá contener los verbos "manejó", "saltó" , "corrió " , "caminó" y "omitió"</p> 
+    <p>El arreglo preposiciones deberá contenerlas preposiciones " a " , "desde", "encina  de", "debajo de" y "sobre".</p>
+    <p>El programa deberá generar 20 enunciados para formar una historia corta y mostrar el resultado en un elemento textarea de IIT M L 5 . La historia debe empezar con la linea “Habia  una  vez. . . y terminar con la  línea "FIN".</p>
+    <div id="oraciones"></p>
+    <script>
+        let articulo=["el ", "un", "algún","ningún"]
+        let sustantivo=["niño", "niña",  "perro", "ciudad","auto"]
+        let verbo=["manejó", "saltó" , "corrió " , "caminó", "omitió"]
+        let preposicion=[" a " , "desde", "encina  de", "debajo de","sobre"]
+
+        let divOraciones=document.querySelector('#oraciones');
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        for (let i = 0; i<20; i++) {
+            let p = document.createElement('p');
+            let a=getRandomInt(4);
+            let b=getRandomInt(5);
+            let c=getRandomInt(4);
+            let d=getRandomInt(5);
+            p.textContent='Habia una vez ${articulo[a]} ${sustantivo[b]} que ${verbo[c]} ${preposicion[d]}  fin.';
+            divOraciones.appendChild(p)
+        }  
+</script>
+</body>
+</html>

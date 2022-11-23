@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.5</title>
+</head>
+<body>
+    <h2>Modifique La solución al ejercicio 11.4 para usar el método round de Math en vez dd método floor.</h2>
+    <form action="">
+        <label for="">Ingrese el digito:</label>
+        <input type="number" class="valor">
+    </form>
+    <button id="save">Resultado</button>
+    <p class="respuesta"></p>
+    <script>
+        let btnGuardar = document.querySelector('#save');
+        btnGuardar.addEventListener('click', e=>{
+            let inputNumber = parseFloat(document.querySelector('.valor').value);
+            let respuesta= document.querySelector('.respuesta');
+            let entero=redondearAEntero(inputNumber);
+            let decimas=redondearADecimas(inputNumber);
+            let centesimas=redondearACentesimas(inputNumber);
+            let mil=redondearAMilesimas(inputNumber);
+            respuesta.textContent=`Valor original: ${inputNumber},Redondeado: ${entero}, Decimas: ${decimas},Centesimas: ${centesimas},Milesimas ${mil}`;
+        });
+        function redondearAEntero(n){
+            return Math.round(n);
+        }
+        function redondearADecimas(n){
+            return Math.round(n)/10; 
+        }
+        function redondearACentesimas(n){
+            return Math.round(n)/100; 
+        }
+        function redondearAMilesimas(n){
+            return Math.round(n)/1000; 
+        }
+    </script>
+</body>
+</html>

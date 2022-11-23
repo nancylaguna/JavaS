@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.9</title>
+</head>
+<body>
+    <h2>Escriba una secuencia de comandos que codifique frases en español a frases en latín cerdo. El 
+        brfn cerdo es una forma de lenguaje codificado, que se utiliza con frecuencia por diversión. Existen muchas 
+        variaciones en los métodos utilizados para formar frases en b tín cerdo. Por cuestiones de simpleza, utilice el siguiente algoritmo:</h2>
+        <form action="">
+            <label for="">Ingrese la frase:</label>
+            <input type="text" class="valor">
+        </form>
+        <button id="save">Resultado</button>
+        <p class="respuesta"></p>
+    <script>
+        let btnGuardar = document.querySelector('#save');
+        btnGuardar.addEventListener('click', e=>{
+            let aux_dos="";
+            let frase = document.querySelector('.valor').value;
+            let respuesta= document.querySelector('.respuesta');
+            //let frase;
+            let palabras=frase.split(' ');
+            palabras.forEach((palabra)=>{
+                let arr = [...palabra];
+                let primara=arr[0];
+                let ultima=arr[arr.length-1];
+                arr[0]=ultima;
+                arr[arr.length-1]=primara +"ae";
+                let aux=arr.join('');
+                aux_dos+=" "+aux;
+                console.log(aux);
+                console.log(aux_dos);
+            })
+            respuesta.textContent=`Valor original: ${frase},Redondeado: ${aux_dos}`;
+        });
+        
+    </script>
+</body>
+</html>

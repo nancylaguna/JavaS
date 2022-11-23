@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.13</title>
+</head>
+<body>
+    <h2> Escriba una secuencia de comandos que reciba como entrada varias líneas de texto y un carácter de búsqueda, y que utilice el método String indexOf para determinar el número de ocurrencias de ese  carácter en el texto.</h2>
+        <script>
+            let btnGuardar = document.querySelector('#save');
+            btnGuardar.addEventListener('click', e=>{
+                let aux_dos="";
+                let frase = document.querySelector('.valor').value;
+                let respuesta= document.querySelector('.respuesta');
+                let palabras=frase.split(' ');
+                palabras.forEach((palabra)=>{
+                    let arr = [...palabra];
+                    let primara=arr[0];
+                    let ultima=arr[arr.length-1];
+                    arr[0]=ultima;
+                    arr[arr.length-1]=primara +"ae";
+                    let aux=arr.join('');
+                    aux_dos+=" "+aux;
+                    console.log(aux);
+                    console.log(aux_dos);
+                })
+                respuesta.textContent='Valor original: ${frase},Redondeado: ${aux_dos}';
+            });
+        </script>
+    </body>
+</html>

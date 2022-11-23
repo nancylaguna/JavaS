@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.4</title>
+</head>
+<body>
+    <h2> El método floor de Math puede usarse para redondear un núm ero a un lugar decimal específico. Por ejemplo, la instrucción</h2>
+    <p>    y=Math.floor(x*10*.5)/10;    </p>
+    <p>    redondea x a la  posición de décimas ( la primera posición a la  derecha del punto decimal). La instrucción y= math.floor(x*100*.5)/100;</p>
+    <p>redondea x a la posición de centésimas (es decir, la  segunda posición a la derecha del  punto decimal). Escriba una secuencia de comandos que defina cuatro funciones para redondear un número x de varias formas:</p>
+    <p>a) redondearAEntero(número  )</p>
+    <p>b) redondearADecimas(número )</p> 
+    <p>c) redondearACentesimas(número  )</p> 
+    <p>d) redondearAMilesimas(número )</p> 
+    <p>Para cada valor leído, su programa deberá mostrar el valor original, el número redondeado al entero mis cercano, el número redondeado a la décima mas cercana, el número redondeado a la centésima más cercana y el número  redondeado a la milésima más cercana.</p>
+    <form action="">
+        <label for="">Ingrese el digito:</label>
+        <input type="number" class="valor">
+    </form>
+    <button id="save">Resultado</button>
+
+    <p class="respuesta"></p>
+    <script>
+        let btnGuardar = document.querySelector('#save');
+        btnGuardar.addEventListener('click', e=>{
+            let inputNumber = parseFloat(document.querySelector('.valor').value);
+            let respuesta= document.querySelector('.respuesta');
+            let entero=redondearAEntero(inputNumber);
+            let decimas=redondearADecimas(inputNumber);
+            let centesimas=redondearACentesimas(inputNumber);
+            let mil=redondearAMilesimas(inputNumber);
+            respuesta.textContent=`Valor original: ${inputNumber},Redondeado: ${entero}, Decimas: ${decimas},Centesimas: ${centesimas},Milesimas ${mil}`;
+        });
+
+        function redondearAEntero(n){
+            return Math.round(n);
+        }
+        function redondearADecimas(n){
+            return Math.floor(n)/10; 
+        }
+        function redondearACentesimas(n){
+            return Math.floor(n)/100; 
+        }
+        function redondearAMilesimas(n){
+            return Math.floor(n)/1000; 
+        }
+    </script>
+</body>
+</html>

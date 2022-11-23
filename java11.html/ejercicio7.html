@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.8</title>
+</head>
+<body>
+    <h2>Una quintilla es un verso humorístico de cinco líneas en la cual la primera y segunda linea riman con la 
+        quinta, y la  tercera línea rima con la cuarta. Utilizando técnicas similares a las desarrolladas en el ejercicio 11.7, escriba una secuencia de comandos que produzca quintillas al azar. Mejorar el programa para producir buenas quintillas 
+        es un gran desafio, ¡pero d  resultado valdrá la pena</h2>
+        <div id="oraciones"></p>
+
+        <script>
+            let articulo=["el ", "un", "algún", "ningún"]
+            let sustantivo=["niño", "niña",  "perro", "ciudad", "auto"]
+            let verbo=["manejó", "saltó" , "corrió" , "caminó", "omitió"]
+            let preposicion=[" se la pasaba" , "desde", "encina  de", "debajo de","sobre"]
+            let rimaA=["pensando" , "soñando", "matando"]
+            let rimaB=["decía" , "alegría ", "quería"]
+        
+            let divOraciones=document.querySelector('#oraciones');
+        
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            let rima='';
+
+            for (let i = 0; i<20; i++) {
+                let p = document.createElement('p');
+                let a=getRandomInt(4);
+                let b=getRandomInt(5);
+                let c=getRandomInt(4);
+                let d=getRandomInt(5);
+                let e=getRandomInt(3);
+                if(i%2==0){
+                    rima='';
+                    rima =rimaA[e];
+                }else{
+                    rima='';
+                    rima =rimaB[e];
+                }
+                p.textContent=`${articulo[a]} ${sustantivo[b]} que ${verbo[c]} ${preposicion[d]} ${rima}`;
+                divOraciones.appendChild(p)
+            }  
+        </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.11</title>
+</head>
+<body>
+    <h2>Escriba una secuencia de comandos que reciba como entrada una línea de texto, que divida la línea en tokens me­diante el  método split de String y que muestre los tokens en orden inverso.</h2>
+    <form action="">
+        <label for="">Ingrese la frase:</label>
+        <input type="text" class="valor">
+    </form>
+    <button id="save">Resultado</button>
+    <p class="respuesta"></p>
+<script>
+    let btnGuardar = document.querySelector('#save');
+    btnGuardar.addEventListener('click', e=>{
+        let frase = document.querySelector('.valor').value;
+        let respuesta= document.querySelector('.respuesta');
+        let palabras=frase.split(' ');
+        const reversed = palabras.reverse();
+        let aux=reversed.join(' ');
+        respuesta.textContent='Frase: ${frase}, frase inversa: ${aux}';
+    });        
+</script>
+</body>
+</html>

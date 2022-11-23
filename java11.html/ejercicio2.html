@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.3</title>
+</head>
+
+<body>
+    <h2>Escriba una secuencia de comandos que evalúe rodas las funciones que pueda de la biblioteca Math de la figura 11.1. Para ejecutar cada una de estas funciones, haga que su programa muestre tablas de valores de retorno o para varios valores de argumentos en un elemento textArea.</h2>
+    <p>Valor absoluto(abs)</p>
+    <textarea name="" id="a" cols="30" rows="10"></textarea>
+    <p>Redondear (ceil)</p>
+    <textarea name="" id="b" cols="30" rows="10"></textarea>
+    <p>Coseno (cos)</p>
+    <textarea name="" id="c" cols="30" rows="10"></textarea>
+    <p>Exponencial (exp)</p>
+    <textarea name="" id="d" cols="30" rows="10"></textarea>
+    <p>Redondear(floor)</p>
+    <textarea name="" id="e" cols="30" rows="10"></textarea>
+    <p>logaritmo natual (log)</p>
+    <textarea name="" id="f" cols="30" rows="10"></textarea>
+    <p>Maximo (max)</p>
+    <textarea name="" id="g" cols="30" rows="10"></textarea>
+    <p>Minimo (min)</p>
+    <textarea name="" id="h" cols="30" rows="10"></textarea>
+    <p>Potencia (pow)</p>
+    <textarea name="" id="i" cols="30" rows="10"></textarea>
+    <p>Redondea (round)</p>
+    <textarea name="" id="j" cols="30" rows="10"></textarea>
+    <p>Seno (sin)</p>
+    <textarea name="" id="k" cols="30" rows="10"></textarea>
+    <p>Raíz cuadrada (sqrt)</p>
+    <textarea name="" id="l" cols="30" rows="10"></textarea>
+    <p>Tangente (tan)</p>
+    <textarea name="" id="m" cols="30" rows="10"></textarea>
+    <script>
+            let a = document.querySelector('#a');
+            let b = document.querySelector('#b');
+            let c = document.querySelector('#c');
+            let d = document.querySelector('#d');
+            let e = document.querySelector('#e');
+            let f = document.querySelector('#f');
+            let g = document.querySelector('#g');
+            let h = document.querySelector('#h');
+            let i = document.querySelector('#i');
+            let j = document.querySelector('#j');
+            let k = document.querySelector('#k');
+            let l = document.querySelector('#l');
+            let m = document.querySelector('#m');
+
+            let a_r=Math.abs(-20);
+            let b_r=Math.ceil(1.65);
+            let c_r=Math.cos(1);
+            let d_r=Math.exp(5);
+            let e_r=Math.exp(5.95);
+            let f_r=Math.log(2.45);
+            let g_r=Math.max(45,56);
+            let h_r=Math.min(45,56);
+            let i_r=Math.pow(6,5);
+            let j_r=Math.round(6.54);
+            let k_r=Math.sin(0);
+            let l_r=Math.sqrt(100);
+            let m_r=Math.tan(0);
+            a.textContent='El valor absoluto de -20 es ${a_r}';
+            b.innerHTML='Redondea de 1.65 a ${b_r}';
+            c.innerHTML='El coseno de 1 es ${c_r}';
+            d.innerHTML='El exponencial de 5 es ${d_r}';
+            e.innerHTML='Redondea de 5.95 a ${e_r}';
+            f.innerHTML='El logaritmo natural de 2.45 es ${f_r}';
+            g.innerHTML='El numero mayor de 45 y 56 es ${g_r}';
+            h.innerHTML='El numero menor de 45 y 56 es ${h_r}';
+            i.innerHTML='La potencia de 6 a la 5 es ${i_r}';
+            j.innerHTML='Redondear 6.54 a ${j_r}';
+            k.innerHTML='El seno de 0 es ${k_r}';
+            l.innerHTML='La raiz cuadrada de 100 es ${l_r}';
+            m.innerHTML='La tangente de 0 es ${m_r}';
+    </script>
+</body>
+
+</html>

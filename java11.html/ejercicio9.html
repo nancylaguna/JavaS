@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.10</title>
+</head>
+<body>
+    <h2>Escriba una aplicación que reciba como entrada un número telefónico como una cadena deb forma (S55 555-5555.  zLa aplicación deberá utilizar d  método S tr in g   s p l i t  para extraer d  código de área como un token, los primeros tres dígitos dd número tdcfónico como otro token y los últimos cuatro dígitos del número tdefónico como otro token. 
+    Muestre en pantalb d  código de área en un campo de texto y d  número tdefónico de siete dígitos en otro campo de texto.</h2>
+        <form action="">
+            <label for="">Ingrese el numero:</label>
+            <input type="text" class="valor">
+        </form>
+        <button id="save">Resultado</button>
+        <p class="respuesta"></p>
+    <script>
+        let btnGuardar = document.querySelector('#save');
+        btnGuardar.addEventListener('click', e=>{
+            let numero = document.querySelector('.valor').value;
+            let respuesta= document.querySelector('.respuesta');
+            let lada=numero.split(')');
+            let token=lada[1].split('-');
+            let ultimo=token[1];
+            respuesta.textContent='Codigo de area: ${lada[0].slice(1)}, lada: ${token[0]}, ultimos digitos ${ultimo}';
+
+        });        
+    </script>
+</body>
+</html>

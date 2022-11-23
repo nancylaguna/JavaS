@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="/JavaS/index.html">
+        <img src="botonregresar.png" width="120"
+        height="50" alt="Regresar">
+    </a>
+    <title>Ejercicio 11.2</title>
+</head>
+
+<body>
+    <h2>
+        Cree una página Web que contenga cuatro botones. Al hacer clic en cada botón, debera aparecer un diálogo de
+        alerta con una hora o fecha diferentes en relación con la hora actual. Cree un botón ahora que alerte sobre la hora y fecha actuales, y un botón Ayer que alerte sobre la fecha y hora hace 24 horas. Los otros dos botones deberán alertar sobre la fecha y hora hace diez años y una semana a partir de hoy.
+        <div>
+            <button class="btnUno" >Actual</button>
+            <button class="btnDos" >Ayer</button>
+            <button class="btnTres" >10 años</button>
+            <button class="btnCuatro">Una semana</button>
+        </div>
+    </h2>
+    <script>
+        let btnUno=document.querySelector('.btnUno');
+        let btnDos=document.querySelector('.btnDos');
+        let btnTres=document.querySelector('.btnTres');
+        const date = new Date();
+        const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()]
+        const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+        let btnCuatro=document.querySelector('.btnCuatro');
+        btnUno.addEventListener('click',e=>{
+            alert('Dia: ${day}, Mes: ${month+1},Año: ${year}, Hora: ${hour}, Minutos: ${minutes}');
+        })
+        btnDos.addEventListener('click',e=>{
+            alert('Dia: ${day-1}, Mes: ${month+1},Año: ${year}, Hora: ${hour}, Minutos: ${minutes}');
+
+        })
+        btnTres.addEventListener('click',e=>{
+            alert('Dia: ${day}, Mes: ${month+1},Año: ${year-10}, Hora: ${hour}, Minutos: ${minutes}');
+        })
+        btnCuatro.addEventListener('click',e=>{
+            alert('Dia: ${day-7}, Mes: ${month+1},Año: ${year}, Hora: ${hour}, Minutos: ${minutes}');
+        })
+    </script>
+</body>
+</html>
